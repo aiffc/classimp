@@ -42,7 +42,7 @@
         (cl:unless (cl:case major
                      (3 (cl:<= 0 minor 3))
                      (4 (cl:<= 0 minor 1))
-                     (5 (cl:= minor 0))
+                     (5 (cl:<= 0 minor 2))
                      (cl:t ()))
           (cl:error "trying to link against unsupported version of assimp. 3.0-5.0.x supported, got version ~a.~a"
                     major minor))
@@ -60,7 +60,7 @@
         (cl:unless (cl:case major
                      (3 (cl:<= 0 minor 3))
                      (4 (cl:<= 0 minor 1))
-                     (5 (cl:= minor 0))
+                     (5 (cl:<= 0 minor 2))
                      (cl:t ()))
           (cl:error "trying to link against unsupported version of assimp. 3.0-5.0.x supported, got version ~a.~a"
                     major minor))
